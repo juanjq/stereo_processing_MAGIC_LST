@@ -1,1 +1,1 @@
-# stereo_processing_MAGIC_LST
+# stereo_processing_magic_lst
