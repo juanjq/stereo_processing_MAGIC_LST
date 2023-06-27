@@ -1,7 +1,7 @@
 # stereo_processing_magic_lst
 ## Pipeline Description
 
-A detailed description of all the steps in the pipeline are described below. As well as step-by-step instructions on how to use it. The scripts are prepared to run in the IT cluster, since it uses files that are there. But you can still run it from outside if you download the files and use them from another location, changing the paths. All the scripts and notebooks can be downloaded from this GitHub that as been prepared for this work [1](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/thesis_stereo_magic%26lst1.pdf).
+A detailed description of all the steps in the pipeline are described below. As well as step-by-step instructions on how to use it. The scripts are prepared to run in the IT cluster, since it uses files that are there. But you can still run it from outside if you download the files and use them from another location, changing the paths. All the scripts and notebooks can be downloaded from this GitHub that as been prepared for this work [[1]](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/thesis_stereo_magic%26lst1.pdf).
 
 ### Data Levels and File Locations
 
