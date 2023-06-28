@@ -63,7 +63,7 @@ Once the configuration files have been prepared, we can start running the script
 9. **Add complementary data:** The last step to perform is adding some additional data to the DL2 files. These scripts add data to the previously generated files with the selected number of off regions. It calculates the $\theta^2$ parameter (see [Section 3](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/thesis_stereo_magic%26lst1.pdf)) for the ON and OFF regions. It also adds other supplementary information, such as the zenith distance (from the altitude coordinate), for convenience in further analysis. The scripts can be run with the notebook `dl2_additional_data.ipynb` inside the `notebooks_data_generation` folder.
 
 <p align="center">
-  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-5-1.png" width="1000" height="340">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-5-1.png" width="1000" height="320">
 </p>
 
 With that, all the data has been processed, and different files with all the information have been stored. Now the physical analysis can start to be done. It can be divided into three main parts:
