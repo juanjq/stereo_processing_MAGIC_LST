@@ -16,7 +16,7 @@ As explained in [Section 1](https://github.com/juanjq/stereo_processing_magic_ls
 Before starting with the running of the pipeline, some considerations should be taken and the files need to be configured for the analysis you want to perform. The main parameters that can be changed in the `config.yaml` file inside the `config_files` folder. The parameters that can be selected are summarized here:
 
 <p align="center">
-  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-1-1.png" width="600" height="430">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-1-1.png" width="500" height="330">
 </p>
 
 - **Source name:** The source that is being studied can be changed. Using the `source_name` variable in `config.yaml` the source can be specified by its standard name. Otherwise the exact coordinates can also be specified.
