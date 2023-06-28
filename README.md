@@ -15,6 +15,10 @@ As explained in [Section 1](https://github.com/juanjq/stereo_processing_magic_ls
 
 Before starting with the running of the pipeline, some considerations should be taken and the files need to be configured for the analysis you want to perform. The main parameters that can be changed in the `config.yaml` file inside the `config_files` folder. The parameters that can be selected are summarized here:
 
+<p align="center">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-1-1.png" width="600" height="430">
+</p>
+
 - **Source name:** The source that is being studied can be changed. Using the `source_name` variable in `config.yaml` the source can be specified by its standard name. Otherwise the exact coordinates can also be specified.
 - **Interpolation method:** Changing `interpolation_method` in `config.yaml` to `nearest` (no interpolation), `linear` or `cubic` the interpolation method to use the IRFs can be specified.
 - **Cut types:** For the cuts applied in gammaness and $\theta^2$ a fixed cut or a dynamic cut can be specified with the variable `cut_type` in `config.yaml`. For a fixed cut, use `global`, and for a dynamic one `dynamic`. The cut values or efficiencies can also be specified.
@@ -32,9 +36,21 @@ Once the configuration files have been prepared, we can start running the script
 
 2. **DL1 stereo coincidences:** Once we have all the data in the same stage and format (DL1), the stereo information can be extracted by finding the coincidence of events. The Bash script `dl1_to_stereo.sh` located in the folders `bash_scripts/bash_dl1_to_stereo` needs to be run. This script finds the coincident events between telescopes, as explained in [Section 3](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/thesis_stereo_magic%26lst1.pdf), and creates a unique DL1 file per telescope. The files are stored in a folder for each LST-1 run in subrun-wise format.
 
+<p align="center">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-2-1.png" width="600" height="430">
+</p>
+
 3. **DL1 to DL2:** All DL1 data is processed with the scripts to DL2. In this step, the RF files need to be input, and the source path can be changed to use different RFs. The script `stereo_to_dl2.sh` is located in the GitHub folder `bash_scripts/bash_stereo_to_dl2`. Running it will generate a DL2 file per run and store it in a specified unique folder.
 
+<p align="center">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-4-1.png" width="600" height="430">
+</p>
+
 4. **Create IRFs and DL2 to DL3:** Before obtaining the DL3 data, the specific IRFs need to be produced. The notebook `create_irfs_and_dl2_to_dl3.ipynb` inside the folder `notebooks_dl2_to_dl3` in the GitHub repository should be run. The first part of this notebook generates the IRFs given the required MC files and stores them in one folder. Then, the second part of the notebook processes the DL2 data to DL3, creating the respective index files. The DL3 data is also stored run-wise in a unique folder.
+
+<p align="center">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-1-1.png" width="600" height="430">
+</p>
 
 5. **Standalone datasets:** In order to compare the data obtained with this analysis with data obtained with individual telescopes' analysis, the notebook `create_lst_only_hdf.ipynb` inside the `notebooks_data_generation` folder should be run to obtain the LST-1 standalone dataset. For the case of MAGIC, the notebook `create_melibea_hdf.ipynb` in the same folder should be run. Both notebooks will select the exact same events that have been analyzed for the three telescopes and create a DL2 dataset with these events in `.hdf5` format.
 
@@ -45,6 +61,10 @@ Once the configuration files have been prepared, we can start running the script
 8. **Coincidences datasets:** In the second step of this chain, the event coincidence finding has been performed. In the generated files, there is more information than the DL1 data. Additional information is also stored in the keys `coincidence/profile` and `coincidence/feature` of the `.hdf5` files. The former contains the number of coincident events for the different tried time offsets (see [Section 3](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/thesis_stereo_magic%26lst1.pdf)), and the latter contains the timestamps and pointings of the different telescopes for each event. This information is merged for all runs and stored in two unique `.hdf5` files. This is achieved by running the notebook `create_coincidences_datasets.ipynb` inside the `notebooks_data_generation` folder.
 
 9. **Add complementary data:** The last step to perform is adding some additional data to the DL2 files. These scripts add data to the previously generated files with the selected number of off regions. It calculates the $\theta^2$ parameter (see [Section 3](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/thesis_stereo_magic%26lst1.pdf)) for the ON and OFF regions. It also adds other supplementary information, such as the zenith distance (from the altitude coordinate), for convenience in further analysis. The scripts can be run with the notebook `dl2_additional_data.ipynb` inside the `notebooks_data_generation` folder.
+
+<p align="center">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-5-1.png" width="600" height="430">
+</p>
 
 With that, all the data has been processed, and different files with all the information have been stored. Now the physical analysis can start to be done. It can be divided into three main parts:
 
