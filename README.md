@@ -3,6 +3,8 @@
 
 A detailed description of all the steps in the pipeline are described below. As well as step-by-step instructions on how to use it. The scripts are prepared to run in the IT cluster, since it uses files that are there. But you can still run it from outside if you download the files and use them from another location, changing the paths. All the scripts and notebooks can be downloaded from this GitHub that as been prepared for this work [[1]](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/thesis_stereo_magic%26lst1.pdf).
 
+  ![alt text](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/stereo-processing-flowchart.pdf)
+
 ### Data Levels and File Locations
 
 As explained in [Section 1](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/thesis_stereo_magic%26lst1.pdf), the already available data is, for the case of MAGIC; the calibrated data, and in the case of LST-1; the DL1 stage. MAGIC data is found at `/fefs/onsite/common/MAGIC/data/MX/event/Calibrated` (with `MX` being `M1` for MAGIC-1 and `M2` for MAGIC-2) and LST-1 DL1 data at `/fefs/aswg/data/real/DL1`. Also the MC files are already processed, and are located at the respective subdirectory of `/fefs/aswg/LST1MAGIC/mc/models`.
