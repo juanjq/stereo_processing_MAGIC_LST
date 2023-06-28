@@ -63,13 +63,25 @@ Once the configuration files have been prepared, we can start running the script
 9. **Add complementary data:** The last step to perform is adding some additional data to the DL2 files. These scripts add data to the previously generated files with the selected number of off regions. It calculates the $\theta^2$ parameter (see [Section 3](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/thesis_stereo_magic%26lst1.pdf)) for the ON and OFF regions. It also adds other supplementary information, such as the zenith distance (from the altitude coordinate), for convenience in further analysis. The scripts can be run with the notebook `dl2_additional_data.ipynb` inside the `notebooks_data_generation` folder.
 
 <p align="center">
-  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-5-1.png" width="1000" height="300">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-5-1.png" width="1000" height="340">
 </p>
 
 With that, all the data has been processed, and different files with all the information have been stored. Now the physical analysis can start to be done. It can be divided into three main parts:
 
 1. **Data sample analysis:** The notebooks used to analyze the dataset itself, in order to characterize it well. Also, the quality of the data is checked and runs can be filtered. The notebooks are located in the `notebooks_analysis_dataset` folder.
 
+<p align="center">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/angular-distributions-dataset.png" width="1000" height="340">
+</p>
+
 2. **DL2 analysis:** The notebooks located in the `notebooks_analysis_dl2` folder are generally used to analyze different aspects of the DL2 data. The gammaness, intensity, energy, IRFs, etc., are analyzed in the different notebooks. In the `arrival_positions` sub-folder, the artifact explained in [Section 5](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/thesis_stereo_magic%26lst1.pdf) is analyzed in different notebooks.
 
+<p align="center">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/energy-gammaness-distributions.png" width="1000" height="340">
+</p>
+
 3. **DL3 analysis:** The higher-level analysis is done using Gammapy, so the Anaconda environment that should be used now needs to contain the latest version of Gammapy. The `gammapy-v1.0` environment can be used.
+
+<p align="center">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/logpar-fermi.png" width="1000" height="340">
+</p>
