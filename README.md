@@ -3,7 +3,7 @@
 
 A detailed description of all the steps in the pipeline are described below. As well as step-by-step instructions on how to use it. The scripts are prepared to run in the IT cluster, since it uses files that are there. But you can still run it from outside if you download the files and use them from another location, changing the paths. All the scripts and notebooks can be downloaded from this GitHub that as been prepared for this work [[1]](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/thesis_stereo_magic%26lst1.pdf).
 
-<img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/stereo-processing-flowchart-1.png" width="150" height="100">
+<img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/stereo-processing-flowchart-1.png" width="500" height="400">
 
 ### Data Levels and File Locations
 
