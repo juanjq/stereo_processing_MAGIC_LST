@@ -71,7 +71,7 @@ With that, all the data has been processed, and different files with all the inf
 1. **Data sample analysis:** The notebooks used to analyze the dataset itself, in order to characterize it well. Also, the quality of the data is checked and runs can be filtered. The notebooks are located in the `notebooks_analysis_dataset` folder.
 
 <p align="center">
-  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/angular-distributions-dataset-1.png" width="600" height="440">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/angular-distributions-dataset-1.png" width="600" height="350">
 </p>
 
 2. **DL2 analysis:** The notebooks located in the `notebooks_analysis_dl2` folder are generally used to analyze different aspects of the DL2 data. The gammaness, intensity, energy, IRFs, etc., are analyzed in the different notebooks. In the `arrival_positions` sub-folder, the artifact explained in [Section 5](https://github.com/juanjq/stereo_processing_magic_lst/blob/main/thesis_stereo_magic%26lst1.pdf) is analyzed in different notebooks.
@@ -83,5 +83,5 @@ With that, all the data has been processed, and different files with all the inf
 3. **DL3 analysis:** The higher-level analysis is done using Gammapy, so the Anaconda environment that should be used now needs to contain the latest version of Gammapy. The `gammapy-v1.0` environment can be used.
 
 <p align="center">
-  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/logpar-fermi-1.png" width="900" height="500">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/logpar-fermi-1.png" width="900" height="450">
 </p>
