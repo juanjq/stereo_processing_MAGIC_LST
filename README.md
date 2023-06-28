@@ -43,7 +43,7 @@ Once the configuration files have been prepared, we can start running the script
 3. **DL1 to DL2:** All DL1 data is processed with the scripts to DL2. In this step, the RF files need to be input, and the source path can be changed to use different RFs. The script `stereo_to_dl2.sh` is located in the GitHub folder `bash_scripts/bash_stereo_to_dl2`. Running it will generate a DL2 file per run and store it in a specified unique folder.
 
 <p align="center">
-  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-3-1.png" width="550" height="300">
+  <img src="https://github.com/juanjq/stereo_processing_magic_lst/blob/main/images/sketch-pipeline-3-1.png" width="366" height="200">
 </p>
 
 4. **Create IRFs and DL2 to DL3:** Before obtaining the DL3 data, the specific IRFs need to be produced. The notebook `create_irfs_and_dl2_to_dl3.ipynb` inside the folder `notebooks_dl2_to_dl3` in the GitHub repository should be run. The first part of this notebook generates the IRFs given the required MC files and stores them in one folder. Then, the second part of the notebook processes the DL2 data to DL3, creating the respective index files. The DL3 data is also stored run-wise in a unique folder.
